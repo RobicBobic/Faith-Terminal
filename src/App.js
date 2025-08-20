@@ -203,13 +203,8 @@ const FaithTerminal = () => {
           </div>
           
           <div className="status-section">
-            <div className="status-badges">
-              <span className="badge badge-online">ONLINE</span>
-              <span className="badge badge-version">v2.0</span>
-            </div>
-            
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/FaithTerminal" 
               target="_blank" 
               rel="noopener noreferrer"
               className="twitter-link"
