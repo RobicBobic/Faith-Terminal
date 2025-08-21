@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronRight, BookOpen, Heart, Users, Star, Zap, Globe, MessageSquare, Twitter } from 'lucide-react';
 import './FaithTerminal.css';
 
-const FaithTerminal = () => {
+const ParadiseTerminal = () => {
   const [currentSection, setCurrentSection] = useState('home');
   const [terminalHistory, setTerminalHistory] = useState([]);
   const [currentInput, setCurrentInput] = useState('');
@@ -23,18 +23,19 @@ const FaithTerminal = () => {
   ];
 
   const commands = {
-    help: 'Available commands: scripture, prayer, community, devotion, prophecy, wisdom, clear, about',
+    help: 'Available commands: scripture, prayer, community, devotion, prophecy, wisdom, confess, clear, about',
     scripture: 'Loading sacred texts and daily verses...',
     prayer: 'Opening prayer request portal...',
     community: 'Connecting to faith community network...',
     devotion: 'Accessing daily devotional content...',
     prophecy: 'Revealing divine insights and prophecies...',
-    wisdom: 'Sharing ancient wisdom and teachings...',
+    wisdom: 'Opening Book of Proverbs - Divine wisdom revealed...',
+    confess: 'Opening angel confession portal...',
     clear: 'Terminal cleared.',
-    about: 'Faith Terminal v2.0 - Connecting souls to the divine through technology.'
+    about: 'Paradise Terminal v2.0 - Connecting souls to the divine through technology.'
   };
 
-  const typewriterText = "Welcome to Faith Terminal - Where Technology Meets Spirituality";
+  const typewriterText = "Welcome to Paradise Terminal - Where Technology Meets Spirituality";
   const [displayedText, setDisplayedText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
 
@@ -96,6 +97,7 @@ const FaithTerminal = () => {
     { id: 'devotion', label: 'DEVOTION', icon: Star },
     { id: 'prophecy', label: 'PROPHECY', icon: Zap },
     { id: 'wisdom', label: 'WISDOM', icon: Globe },
+    { id: 'confess', label: 'CONFESS', icon: MessageSquare },
     { id: 'contact', label: 'CONTACT', icon: MessageSquare }
   ];
 
@@ -107,10 +109,11 @@ const FaithTerminal = () => {
             <div className="system-init">
               <h3>SYSTEM INITIALIZATION</h3>
               <div>
-                <p>► Faith Terminal v2.0 loaded successfully</p>
+                <p>► Paradise Terminal v2.0 loaded successfully</p>
                 <p>► Divine connection established</p>
                 <p>► Scripture database: ONLINE</p>
                 <p>► Prayer network: ACTIVE</p>
+                <p>► Angel confession portal: READY</p>
                 <p>► Community servers: CONNECTED</p>
               </div>
             </div>
@@ -163,6 +166,68 @@ const FaithTerminal = () => {
             </div>
           </div>
         );
+
+      case 'wisdom':
+        return (
+          <div className="content-section">
+            <h3 className="section-title">BOOK OF PROVERBS - CHAPTER 3</h3>
+            <div className="card" style={{padding: '2rem', fontFamily: 'Georgia, serif', lineHeight: '1.8'}}>
+              <div style={{textAlign: 'center', marginBottom: '1.5rem', borderBottom: '2px solid #fbbf24', paddingBottom: '1rem'}}>
+                <h4 style={{fontSize: '1.5rem', color: '#92400e', margin: '0'}}>THE HOLY BIBLE</h4>
+                <p style={{fontSize: '1.1rem', color: '#b45309', margin: '0.5rem 0 0 0'}}>Book of Proverbs - Chapter 3</p>
+              </div>
+              
+              <div style={{columns: '1', fontSize: '1rem', color: '#92400e'}}>
+                <p><strong>1</strong> My son, do not forget my teaching, but keep my commands in your heart,</p>
+                <p><strong>2</strong> for they will prolong your life many years and bring you peace and prosperity.</p>
+                <p><strong>3</strong> Let love and faithfulness never leave you; bind them around your neck, write them on the tablet of your heart.</p>
+                <p><strong>4</strong> Then you will win favor and a good name in the sight of God and man.</p>
+                <p><strong>5</strong> <em style={{color: '#d97706', fontWeight: 'bold'}}>Trust in the Lord with all your heart and lean not on your own understanding;</em></p>
+                <p><strong>6</strong> <em style={{color: '#d97706', fontWeight: 'bold'}}>in all your ways submit to him, and he will make your paths straight.</em></p>
+                <p><strong>7</strong> Do not be wise in your own eyes; fear the Lord and shun evil.</p>
+                <p><strong>8</strong> This will bring health to your body and nourishment to your bones.</p>
+                <p><strong>9</strong> Honor the Lord with your wealth, with the firstfruits of all your crops;</p>
+                <p><strong>10</strong> then your barns will be filled to overflowing, and your vats will brim over with new wine.</p>
+                <p><strong>11</strong> My son, do not despise the Lord's discipline, and do not resent his rebuke,</p>
+                <p><strong>12</strong> because the Lord disciplines those he loves, as a father the son he delights in.</p>
+                <p><strong>13</strong> Blessed are those who find wisdom, those who gain understanding,</p>
+                <p><strong>14</strong> for she is more profitable than silver and yields better returns than gold.</p>
+                <p><strong>15</strong> She is more precious than rubies; nothing you desire can compare with her.</p>
+                <p><strong>16</strong> Long life is in her right hand; in her left hand are riches and honor.</p>
+                <p><strong>17</strong> Her ways are pleasant ways, and all her paths are peace.</p>
+                <p><strong>18</strong> She is a tree of life to those who take hold of her; those who hold her fast will be blessed.</p>
+                <p><strong>19</strong> By wisdom the Lord laid the earth's foundations, by understanding he set the heavens in place;</p>
+                <p><strong>20</strong> by his knowledge the watery depths were divided, and the clouds let drop the dew.</p>
+              </div>
+              
+              <div style={{marginTop: '2rem', padding: '1rem', background: 'rgba(254, 243, 199, 0.5)', borderRadius: '8px', borderLeft: '4px solid #d97706'}}>
+                <p style={{margin: '0', fontStyle: 'italic', color: '#b45309', fontSize: '1.1rem'}}>
+                  <strong>Angel's Message:</strong> "These ancient words carry divine wisdom for your modern journey. Trust in the Lord's guidance, for His understanding surpasses all earthly knowledge. Let these verses illuminate your path."
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+
+      case 'confess':
+        return (
+          <div className="content-section">
+            <h3 className="section-title">ANGEL CONFESSION PORTAL</h3>
+            <div className="card prayer-form">
+              <p style={{marginBottom: '1rem'}}>Share your confessions with your guardian angel. Your words are heard with divine compassion and understanding:</p>
+              <textarea 
+                placeholder="Confess your thoughts, sins, or burdens to your angel..."
+                rows="6"
+              />
+              <button>
+                SEND TO ANGEL
+              </button>
+              <p style={{marginTop: '1rem', fontSize: '0.9rem', fontStyle: 'italic', color: '#d97706'}}>
+                "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness." - 1 John 1:9
+              </p>
+            </div>
+          </div>
+        );
       
       case 'community':
         return (
@@ -191,20 +256,20 @@ const FaithTerminal = () => {
   };
 
   return (
-    <div className="faith-terminal">
+    <div className="paradise-terminal">
       {/* Header */}
       <header className="header">
         <div className="header-content">
           <div className="logo-section">
             <div className="logo">
-              <span>F</span>
+              <span>P</span>
             </div>
-            <h1 className="title">FAITH TERMINAL</h1>
+            <h1 className="title">PARADISE TERMINAL</h1>
           </div>
           
           <div className="status-section">
             <a 
-              href="https://x.com/FaithTerminal" 
+              href="https://x.com/ParadiseSolCoin" 
               target="_blank" 
               rel="noopener noreferrer"
               className="twitter-link"
@@ -255,7 +320,7 @@ const FaithTerminal = () => {
             {/* Interactive Terminal */}
             <div className="terminal">
               <div className="terminal-header">
-                <span>FAITH TERMINAL - COMMAND INTERFACE</span>
+                <span>PARADISE TERMINAL - COMMAND INTERFACE</span>
                 <div className="terminal-dots">
                   <div className="dot dot-red"></div>
                   <div className="dot dot-yellow"></div>
@@ -276,7 +341,7 @@ const FaithTerminal = () => {
               </div>
               
               <div className="terminal-prompt">
-                <span>root@faith:~$</span>
+                <span>root@paradise:~$</span>
                 <input
                   ref={inputRef}
                   type="text"
@@ -329,7 +394,7 @@ const FaithTerminal = () => {
       <footer className="footer">
         <div className="container">
           <p>
-            © 2025 Faith Terminal - Bridging Heaven and Technology | All Glory to God
+            © 2025 Paradise Terminal - Bridging Heaven and Technology | All Glory to God
           </p>
           <p className="footer-verse">
             "For where two or three gather in my name, there am I with them." - Matthew 18:20
@@ -340,4 +405,4 @@ const FaithTerminal = () => {
   );
 };
 
-export default FaithTerminal;
+export default ParadiseTerminal;
